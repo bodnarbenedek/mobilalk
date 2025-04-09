@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application_mukodj</string>
+    <string name="name">Felhasználónév</string>
+    <string name="password">Jelszó (legalább 6 karakter)</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="registration">Regisztráció</string>
+    <string name="email_adress">Email</string>
+    <string name="password_again">Jelszó újra</string>
+    <string name="cancel">Mégse</string>
+    <string name="sign_in_as_guest">Bejelentkezés vendégként</string>
+</resources>
