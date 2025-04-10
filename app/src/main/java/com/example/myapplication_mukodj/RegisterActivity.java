@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     EditText UserNameEditText;
-    EditText UserEmailEditText;
+    EditText UserNameEmailEditText;
     EditText UserpasswordEditText;
     EditText UserpasswordagainEditText;
 
@@ -55,16 +55,16 @@ public class RegisterActivity extends AppCompatActivity {
         if(secret_key != 99){
             finish();
         }
-        UserNameEditText = findViewById(R.id.user_nameEditText);
-        UserEmailEditText = findViewById(R.id.user_emailEditText);
+        UserNameEmailEditText = findViewById(R.id.user_emailEditText);
+        UserNameEditText= findViewById(R.id.user_nameEditText);
         UserpasswordEditText = findViewById(R.id.password_edittext);
         UserpasswordagainEditText = findViewById(R.id.password_again_edittext);
 
         preferences = getSharedPreferences(PREF_KEY, MODE_PRIVATE);
-        String userName = preferences.getString("userName", "");
+        String userNameEmail = preferences.getString("userNameEmail", "");
         String password = preferences.getString("password", "");
 
-        UserNameEditText.setText(userName);
+        UserNameEmailEditText.setText(userNameEmail);
         UserpasswordEditText.setText(password);
         UserpasswordagainEditText.setText(password);
 
@@ -78,7 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void register(View view) {
 
         String userName = UserNameEditText.getText().toString();
-        String userEmail = UserEmailEditText.getText().toString();
+        String userEmail = UserNameEmailEditText.getText().toString();
         String userPassword = UserpasswordEditText.getText().toString();
         String userPasswordagain = UserpasswordagainEditText.getText().toString();
 

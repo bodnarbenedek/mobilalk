@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String PREF_KEY = MainActivity.class.getPackage().toString();
     private static final int SECRET_KEY = 99;
 
-    EditText userNameET;
+    EditText userNameEmailET;
     EditText passwordET;
 
     private SharedPreferences preferences;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        userNameET = findViewById(R.id.editTextUserName);
+        userNameEmailET = findViewById(R.id.editTextUserName);
         passwordET = findViewById(R.id.editPassword);
 
         preferences = getSharedPreferences(PREF_KEY, MODE_PRIVATE);
@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
     public void login(View view) {
 
 
-        String userName = userNameET.getText().toString();
+        String userNameEmail = userNameEmailET.getText().toString();
         String password = passwordET.getText().toString();
 
         //Log.i(LOG_TAG, "Sikeres belépés!"+userName+" "+ password);
 
-        mAuth.signInWithEmailAndPassword(userName, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(userNameEmail, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("userName", userNameET.getText().toString());
+        editor.putString("userNameEmail", userNameEmailET.getText().toString());
         editor.putString("password", passwordET.getText().toString());
         editor.apply();
         Log.i(LOG_TAG,"onPause");
