@@ -19,6 +19,17 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
+            android:name=".TramActivity"
+            android:exported="false" />
+        <activity android:name=".BusActivity"
+            android:exported="false"/>
+        <activity android:name=".TroliActivity"
+            android:exported="false"/>
+        <activity android:name=".UserDataActivity"
+            android:exported="false"/>
+        <activity android:name=".EditUserActivity"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

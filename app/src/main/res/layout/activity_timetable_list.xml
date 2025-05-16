@@ -7,38 +7,102 @@
     android:layout_height="match_parent"
     tools:context=".Timetable_list_activity">
 
+    <!-- Villamos menetrend -->
+
+    <!-- Busz menetrend -->
+
+    <TextView
+        android:id="@+id/tvVillamosTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Villamos menetrend"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/villamos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/villamos"
         android:layout_width="240dp"
         android:layout_height="120dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="128dp"
+        android:clickable="true"
+        android:focusable="true"
         android:scaleType="centerCrop"
         android:transitionName="vili"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/villamos" />
 
+    <TextView
+        android:id="@+id/tvBuszTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Busz menetrend"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/busz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp" />
+
     <ImageView
         android:id="@+id/busz"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_width="240dp"
         android:layout_height="120dp"
-        android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:transitionName="bus"
+        app:srcCompat="@drawable/busz"
         app:layout_constraintTop_toBottomOf="@id/villamos"
-        app:srcCompat="@drawable/busz" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Troli menetrend -->
+    <TextView
+        android:id="@+id/tvTroliTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Troli menetrend"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/troli"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp" />
 
     <ImageView
         android:id="@+id/troli"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_width="240dp"
         android:layout_height="120dp"
-        android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:transitionName="trol"
+        app:srcCompat="@drawable/troli"
         app:layout_constraintTop_toBottomOf="@id/busz"
-        app:srcCompat="@drawable/troli" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Kedvenc menetrendjeim gomb -->
+    <Button
+        android:id="@+id/user_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Felhasználói adatok"
+        android:onClick="user"
+        app:layout_constraintTop_toBottomOf="@id/troli"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Villamos 2 képei irányonként -->
+    <array name="tram_line2_images">
+        <!-- az elemek sorrendje ugyanolyan, mint a spinner_directions_array_tram elemeié -->
+        <item>@drawable/europa_liget_vasut</item>
+        <item>@drawable/vasut_europaliget</item>
+    </array>
+
+    <array name="tram_line3_images">
+        <item>@drawable/tarjan_vadaspark</item>
+        <item>@drawable/vadaspark_tarjan</item>
+    </array>
+
+    <array name="tram_line3f_images">
+        <item>@drawable/fonogyariut_tarjan</item>
+        <item>@drawable/tarjan_fonogyariut</item>
+    </array>
+
+    <array name="tram_line4_images">
+        <item>@drawable/kecskes_tarjan</item>
+        <item>@drawable/tarjan_kecskes</item>
+    </array>
+
+    <array name="troli_line1e_images">
+        <item>@drawable/kortoltes_vasut</item>
+        <item>@drawable/vasut_kortoltes</item>
+    </array>
+
+    <array name="troli_line5_images">
+        <item>@drawable/gyermekkorhaz_kortoltes</item>
+        <item>@drawable/kortoltes_gyermekkorhaz</item>
+    </array>
+
+    <array name="troli_line6_images">
+        <item>@drawable/gyermekkorhaz_verto</item>
+        <item>@drawable/verto_gyermekkorhaz</item>
+    </array>
+
+    <array name="troli_line8_images">
+        <item>@drawable/klinikak_makkoshaz</item>
+        <item>@drawable/makkoshaz_klinikak</item>
+    </array>
+
+    <array name="busz_line20_images">
+        <item>@drawable/petofitelep_vadkert</item>
+        <item>@drawable/vadkert_petofitelep</item>
+    </array>
+
+    <array name="busz_line21_images">
+        <item>@drawable/ujpetofitelep_vasut</item>
+        <item>@drawable/vasut_ujpetofitelep</item>
+    </array>
+
+    <array name="busz_line71_images">
+        <item>@drawable/katalinutca_szegediipari</item>
+        <item>@drawable/szegediipari_katalinutca</item>
+    </array>
+
+    <array name="busz_line90_images">
+        <item>@drawable/gabonakutato_vasut</item>
+        <item>@drawable/vasut_gabonakutato</item>
+    </array>
+
+
+</resources>

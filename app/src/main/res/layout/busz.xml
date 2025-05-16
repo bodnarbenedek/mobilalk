@@ -20,8 +20,8 @@
         android:id="@+id/spinnerLine"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:entries="@array/spinner_lines_array_troli"
-        android:prompt="@string/prompt_select_line_troli"/>
+        android:entries="@array/spinner_lines_array_bus"
+        android:prompt="@string/prompt_select_line_bus"/>
 
     <!-- Távolság a két mező között -->
     <View

@@ -8,4 +8,97 @@
     <string name="password_again">Jelszó újra</string>
     <string name="cancel">Mégse</string>
     <string name="sign_in_as_guest">Bejelentkezés vendégként</string>
+    <!-- Prompt üzenetek, erőforrásként -->
+    <string name="prompt_select_line_tram">Válaszd ki a villamos számát!</string>
+    <string name="prompt_select_line_bus">Válaszd ki a busz számát!</string>
+    <string name="prompt_select_line_troli">Válaszd ki a troli számát!</string>
+    <string name="prompt_select_direction">Válaszd ki az útirányt!</string>
+
+
+    <!-- Spinner‐ek tartalma -->
+    <string-array name="spinner_lines_array_tram">
+        <item>2</item>
+        <item>3</item>
+        <item>3F</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="spinner_lines_array_troli">
+        <item>1E</item>
+        <item>5</item>
+        <item>6</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="spinner_lines_array_bus">
+        <item>20</item>
+        <item>21</item>
+        <item>71</item>
+        <item>90</item>
+    </string-array>
+
+    <string-array name="spinner_directions_tram_line2">
+        <item>Európa liget → Vasútállomás</item>
+        <item>Vasútállomás → Európa liget</item>
+    </string-array>
+
+    <string-array name="spinner_directions_tram_line3">
+        <item>Tarján → Vadaspark</item>
+        <item>Vadaspark → Tarján</item>
+    </string-array>
+
+    <string-array name="spinner_directions_tram_line3f">
+        <item>Fonógyári út → Tarján</item>
+        <item>Tarján → Fonógyári út</item>
+    </string-array>
+
+    <string-array name="spinner_directions_tram_line4">
+        <item>Kecskés → Tarján</item>
+        <item>Tarján → Kecskés</item>
+    </string-array>
+
+    <string-array name="spinner_directions_array_troli_line1e">
+        <item>Körtöltés utca → Vasútállomás</item>
+        <item>Vasútállomás → Körtöltés utca</item>
+    </string-array>
+
+    <string-array name="spinner_directions_array_troli_line5">
+        <item>Újszeged, Gyermekkórház → Körtöltés utca</item>
+        <item>Körtöltés utca → Újszeged, Gyermekkórház</item>
+    </string-array>
+
+    <string-array name="spinner_directions_array_troli_line6">
+        <item>Újszeged, Gyermekkórház → Vértói út</item>
+        <item>Vértói út → Újszeged, Gyermekkórház</item>
+    </string-array>
+
+    <string-array name="spinner_directions_array_troli_line8">
+        <item>Klinikák → Makkos-ház</item>
+        <item>Makkos-ház → Klinikák</item>
+    </string-array>
+
+    <string-array name="spinner_directions_array_bus_line20">
+        <item>Petőfitelep, Fő tér → Vadkerti tér, buszforduló</item>
+        <item>Vadkerti tér, buszforduló → Petőfitelep, Fő tér</item>
+    </string-array>
+
+    <string-array name="spinner_directions_array_bus_line21">
+        <item>Új-Petőfitelep → Vasútállomás</item>
+        <item>Vasútállomás → Új-Petőfitelep</item>
+    </string-array>
+
+    <string-array name="spinner_directions_array_bus_line71">
+        <item>Katalin utca → Szegedi Ipari Logisztikai Központ</item>
+        <item>Szegedi Ipari Logisztikai Központ → Katalin utca</item>
+    </string-array>
+
+    <string-array name="spinner_directions_array_bus_line90">
+        <item>Újszeged, Gabonakutató → Vasútállomás</item>
+        <item>Vasútállomás → Újszeged, Gabonakutató</item>
+    </string-array>
+
+
+
+
+
 </resources>

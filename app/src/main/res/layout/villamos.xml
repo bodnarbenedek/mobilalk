@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Felirat a járat számának kiválasztásához -->
+    <TextView
+        android:id="@+id/tvSelectLineLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kérlek válaszd ki a járat számát!"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 1. Spinner: Villamosvonal -->
+    <Spinner
+        android:id="@+id/spinnerLine"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:prompt="@string/prompt_select_line_tram"/>
+
+    <!-- Távolság a két mező között -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <!-- Felirat az útirány kiválasztásához -->
+    <TextView
+        android:id="@+id/tvSelectDirectionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kérlek válaszd ki a járat útirányát!"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 2. Spinner: Irány -->
+    <Spinner
+        android:id="@+id/spinnerDirection"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:prompt="@string/prompt_select_direction"/>
+
+    <!-- Gomb az adatok lekéréséhez -->
+    <Button
+        android:id="@+id/btnShowDepartures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menetrend megjelenítése"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Eredmény megjelenítő -->
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

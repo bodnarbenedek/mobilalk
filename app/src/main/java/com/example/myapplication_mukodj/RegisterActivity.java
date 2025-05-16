@@ -20,6 +20,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class RegisterActivity extends AppCompatActivity {
     private static final String LOG_TAG = RegisterActivity.class.getName();
@@ -88,14 +90,33 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         Log.i(LOG_TAG, "Regisztrált:"+userName+ " " + userEmail +" "+ userPassword);
-        //startShopping();
+
 
         mAuth.createUserWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Log.d(LOG_TAG, "User created successfully ");
-                    startShopping();
+                    // 1) Felhasználó sikeresen létrejött, most be kell állítani a displayName-et
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    if (user != null) {
+                        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                .setDisplayName(userName)
+                                .build();
+
+                        user.updateProfile(profileUpdates)
+                                .addOnCompleteListener(profileTask -> {
+                                    if (profileTask.isSuccessful()) {
+                                        Log.d(LOG_TAG, "User profile updated with name: " + userName);
+                                    } else {
+                                        Log.w(LOG_TAG, "Failed to update profile: ", profileTask.getException());
+                                    }
+                                    // Ezt mindenképp hívd meg: tovább a főképernyőre
+                                    startShopping();
+                                });
+                    } else {
+                        // Ez gyakorlatilag nem fordul elő, de legyen fallback
+                        startShopping();
+                    }
                 }else{
                     Log.d(LOG_TAG, "User wasn't created successfully");
                     Toast.makeText(RegisterActivity.this, "User wasn't created successfully: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
