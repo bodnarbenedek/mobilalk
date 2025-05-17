@@ -39,7 +39,7 @@ public class BusActivity extends AppCompatActivity {
         mFirestore = FirebaseFirestore.getInstance();
 
         // 1) Lekérjük az összes bus dokumentumot a "buses" kollekcióból
-        mFirestore.collection("buses")
+        mFirestore.collection("buses").orderBy("szam")
                 .get()
                 .addOnSuccessListener(qSnap -> {
                     busList.clear();

@@ -44,7 +44,7 @@ public class TroliActivity extends AppCompatActivity {
         mFirestore = FirebaseFirestore.getInstance();
 
         // Lekérjük az összes trolibusz dokumentumot
-        mFirestore.collection("trolis")
+        mFirestore.collection("trolis").orderBy("szam")
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
                     trolleyList.clear();

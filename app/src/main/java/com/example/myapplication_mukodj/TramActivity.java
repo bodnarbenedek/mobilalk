@@ -45,7 +45,7 @@ public class TramActivity extends AppCompatActivity {
         mFirestore = FirebaseFirestore.getInstance();
 
         // Lekérjük az összes tram dokumentumot
-        mFirestore.collection("trams")
+        mFirestore.collection("trams").orderBy("szam")
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
                     tramList.clear();
