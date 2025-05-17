@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application_mukodj</string>
+    <string name="app_name">Szegedi menetrendek</string>
     <string name="name">Felhasználónév</string>
     <string name="password">Jelszó (legalább 6 karakter)</string>
     <string name="login">Bejelentkezés</string>
